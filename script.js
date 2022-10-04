@@ -27,5 +27,10 @@ const changeGridSize = function () {
   createGrid(size);
 };
 
-board.addEventListener("mouseover", colorGrid);
+board.addEventListener("mousedown", () =>
+  board.addEventListener("mouseover", colorGrid)
+);
+board.addEventListener("click", () =>
+  board.removeEventListener("mouseover", colorGrid)
+);
 sizeBtn.addEventListener("click", changeGridSize);
