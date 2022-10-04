@@ -27,10 +27,20 @@ body {
 }
 
 .color-picker {
+  border: none;
+  margin-bottom: 1%;
   margin-top: 5%;
   width: 5rem;
   height: 2rem;
+  transition: all 1s;
 }
+
+.color-picker:hover {
+  transform: scale(2);
+  border-radius: 50%;
+  background-color: black;
+}
+
 .size-btn {
   cursor: pointer;
   margin-top: 25px;
