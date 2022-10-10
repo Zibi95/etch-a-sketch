@@ -29,7 +29,7 @@ body {
 .color-picker {
   border: none;
   margin-bottom: 1%;
-  margin-top: 5%;
+  margin-top: 2%;
   width: 5rem;
   height: 2rem;
   transition: all 1s;
@@ -41,6 +41,7 @@ body {
   background-color: black;
 }
 
+.save,
 .size-btn {
   cursor: pointer;
   margin-top: 25px;
@@ -50,6 +51,11 @@ body {
   padding: 1rem;
   border: 2px solid black;
   transition: all 0.5s;
+}
+
+.save:hover {
+  background-color: #4657e8;
+  transform: scale(1.2);
 }
 
 .size-btn:hover {
