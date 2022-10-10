@@ -2,6 +2,7 @@
 const board = document.querySelector(".board");
 const sizeBtn = document.querySelector(".size-btn");
 const colorPicker = document.querySelector(".color-picker");
+const saveBtn = document.querySelector(".save");
 
 //function to create divs inside board 16x16
 const createGrid = function (size) {
@@ -34,3 +35,9 @@ board.addEventListener("click", () =>
   board.removeEventListener("mouseover", colorGrid)
 );
 sizeBtn.addEventListener("click", changeGridSize);
+
+saveBtn.addEventListener("click", function () {
+  domtoimage.toBlob(board).then(function (blob) {
+    window.saveAs(blob, `${new Date()}`);
+  });
+});
